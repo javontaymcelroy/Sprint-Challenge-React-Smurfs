@@ -1,0 +1,39 @@
+.SmurfForm {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 850;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: 2px solid rgb(164, 206, 255);
+}
+
+input::placeholder {
+  padding-left: 10px;
+}
+
+.submit-btn {
+  padding: 15px 0;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background: rgba(21, 67, 203, 1);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+  transition: 0.2s ease-in-out;
+  filter: brightness(120%);
+}

@@ -1,0 +1,62 @@
+.smurfs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 100px;
+  justify-items: center;
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 800;
+}
+
+.Smurf {
+  background-image: url('https://www.thehdroom.com/wp-content/uploads/2017/05/smurfs-the-lost-village-4k.jpg');
+  object-fit: cover;
+  background-size: 310px;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 150px;
+  border-radius: 8px;
+  color: white;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.651);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.801);
+  cursor: pointer;
+  padding-top: 20px;
+}
+
+.Smurf:hover {
+  transition: 0.2s ease-in-out;
+  text-shadow: 0px 15px 10px black;
+  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.664);
+}
+
+.Smurf h3,
+strong,
+p {
+  pointer-events: none;
+}
+
+.Tilt {
+  transform-style: preserve-3d;
+}
+
+.Tilt-inner {
+  transform: translateZ(100px);
+}
+
+.delete-btn {
+  margin-top: 30px;
+  width: auto;
+  padding: 10px 10px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background: rgb(203, 21, 21);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+  transition: 0.2s ease-in-out;
+  filter: brightness(120%);
+}

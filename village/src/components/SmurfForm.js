@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SmurfForm.css';
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -12,14 +13,21 @@ class SmurfForm extends Component {
 
   addSmurf = event => {
     event.preventDefault();
-    // add code to create the smurf using the api
+
+    const newSmurf = {
+      name: event.target.name.value,
+      age: Number(event.target.age.value),
+      height: event.target.height.value
+    };
+
+    this.props.handleNewSmurf(newSmurf);
 
     this.setState({
       name: '',
       age: '',
       height: ''
     });
-  }
+  };
 
   handleInputChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -27,27 +35,29 @@ class SmurfForm extends Component {
 
   render() {
     return (
-      <div className="SmurfForm">
+      <div className='SmurfForm'>
         <form onSubmit={this.addSmurf}>
           <input
             onChange={this.handleInputChange}
-            placeholder="name"
+            placeholder='Smurf Name'
             value={this.state.name}
-            name="name"
+            name='name'
           />
           <input
             onChange={this.handleInputChange}
-            placeholder="age"
+            placeholder='Smurf Age'
             value={this.state.age}
-            name="age"
+            name='age'
           />
           <input
             onChange={this.handleInputChange}
-            placeholder="height"
+            placeholder='Smurf Height'
             value={this.state.height}
-            name="height"
+            name='height'
           />
-          <button type="submit">Add to the village</button>
+          <button type='submit' className='submit-btn'>
+            Add to the village
+          </button>
         </form>
       </div>
     );
