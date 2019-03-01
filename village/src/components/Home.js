@@ -1,8 +1,9 @@
 import React from 'react';
+import '../Home.css';
 
 const Home = () => {
   return (
-    <div>
+    <div className='home-header'>
       <h1>Welcome To Smurf Village!</h1>
       <p>
         Want to join our village? Click the button below to add your own Smurf

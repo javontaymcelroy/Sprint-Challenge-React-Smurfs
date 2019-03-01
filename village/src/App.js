@@ -42,8 +42,8 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Route exact path='/' component={Home} />
         <Route path='/' component={Navigator} />
+        <Route exact path='/' component={Home} />
         <Route
           path='/smurf-form'
           render={props => (
@@ -51,6 +51,7 @@ class App extends Component {
           )}
         />
         <Smurfs smurfs={this.state.smurfs} />
+        <span className='overlay' />
       </div>
     );
   }
