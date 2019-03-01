@@ -29,9 +29,16 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain the differences between `client-side routing` and `server-side routing`.
-- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
-- [ ] Mention three tools we can use to make AJAX requests.
 
+Client-side routing is when the routing is generally controlled by the JavaScript's code. When a user clicks a link, instead of loading a completely new page, the state changes in the app. Client-side routing doesn't need to refresh the entire page, only the components that was updated.
+
+Server-side routing is when you click on a link and a brand new webpage is served to the client. This causing refreshing of the page and disregarding the old page. So, you're not rendering just the new content, you have to re-render everything on the page, which can result is slow loading times.
+
+- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+      Create- POST, Read - GET, Update - PUT, and Delete - DELETE
+
+- [ ] Mention three tools we can use to make AJAX requests.
+      Axios, fetch, and AJAX
 
 ## Project Set Up
 
@@ -53,9 +60,10 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [ ] PM then will count the HW as done by merging the branch back into master.
+
 ## Minimum Viable Product
 
 The MVP of this project will be broken up between 2 stages. Follow each step and be sure to use your design/style skills to make this application look professional.

@@ -1,14 +1,17 @@
 .App {
   text-align: center;
-  background-image: url('https://hdqwalls.com/download/2017-smurfs-the-lost-village-img-2048x1152.jpg');
-  height: 97.6vh;
+  background-image: url('http://hdqwalls.com/wallpapers/smurfs-the-lost-village-4k-5k-ap.jpg');
+  background-size: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .overlay {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 49%,
-    rgba(57, 146, 230, 1) 100%
+    rgba(21, 67, 203, 1) 100%
   );
   position: absolute;
   width: 100%;
