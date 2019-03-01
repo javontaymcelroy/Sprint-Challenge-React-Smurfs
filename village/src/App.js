@@ -15,7 +15,7 @@ class App extends Component {
   }
   async componentDidMount() {
     try {
-      const res = await axios.get('http://localhost:5000/smurfs');
+      const res = await axios.get('http://localhost:3333/smurfs');
       this.setState({ smurfs: res.data });
     } catch (err) {
       console.log(err.message);
