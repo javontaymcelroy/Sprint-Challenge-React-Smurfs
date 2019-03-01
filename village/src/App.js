@@ -1,14 +1,18 @@
+// DEPENDANCIES:
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Route } from 'react-router-dom';
 
+// COMPONENTS:
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
 import Home from './components/Home';
 import Navigator from './components/Navigator';
 
+// STYLES:
 import './App.css';
 
+// CLASS COMPONENT:
 class App extends Component {
   constructor(props) {
     super(props);
@@ -16,6 +20,8 @@ class App extends Component {
       smurfs: []
     };
   }
+
+  // API GET REQUEST:
   async componentDidMount() {
     try {
       const res = await axios.get('http://localhost:3333/smurfs');
@@ -25,6 +31,7 @@ class App extends Component {
     }
   }
 
+  // HANDLERS:
   handleNewSmurf = newSmurf => {
     axios
       .post('http://localhost:3333/smurfs/', newSmurf)
@@ -49,9 +56,6 @@ class App extends Component {
       .catch(err => console.log(err));
   };
 
-  // add any needed code to ensure that the smurfs collection exists on state and it has data coming from the server
-  // Notice what your map function is looping over and returning inside of Smurfs.
-  // You'll need to make sure you have the right properties on state and pass them down to props.
   render() {
     return (
       <div className='App'>
