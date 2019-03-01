@@ -5,13 +5,15 @@
   object-fit: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 2px;
 }
 
 .overlay {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 49%,
-    rgba(21, 67, 203, 1) 100%
+    rgba(0, 27, 108, 0.9528186274509804) 100%
   );
   position: absolute;
   width: 100%;

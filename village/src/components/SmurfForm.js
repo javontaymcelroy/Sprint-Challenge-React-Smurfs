@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SmurfForm.css';
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -38,23 +39,25 @@ class SmurfForm extends Component {
         <form onSubmit={this.addSmurf}>
           <input
             onChange={this.handleInputChange}
-            placeholder='name'
+            placeholder='Smurf Name'
             value={this.state.name}
             name='name'
           />
           <input
             onChange={this.handleInputChange}
-            placeholder='age'
+            placeholder='Smurf Age'
             value={this.state.age}
             name='age'
           />
           <input
             onChange={this.handleInputChange}
-            placeholder='height'
+            placeholder='Smurf Height'
             value={this.state.height}
             name='height'
           />
-          <button type='submit'>Add to the village</button>
+          <button type='submit' className='submit-btn'>
+            Add to the village
+          </button>
         </form>
       </div>
     );
