@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Route } from 'react-router-dom';
 
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
+import Home from './components/Home';
+import Navigator from './components/Navigator';
 
 import './App.css';
 
@@ -39,7 +42,14 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <SmurfForm handleNewSmurf={this.handleNewSmurf} />
+        <Route exact path='/' component={Home} />
+        <Route path='/' component={Navigator} />
+        <Route
+          path='/smurf-form'
+          render={props => (
+            <SmurfForm {...props} handleNewSmurf={this.handleNewSmurf} />
+          )}
+        />
         <Smurfs smurfs={this.state.smurfs} />
       </div>
     );
